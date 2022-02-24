@@ -1,4 +1,7 @@
+import 'package:fanap_challange_flutter/src/presentation/detail/detail_page.dart';
+import 'package:fanap_challange_flutter/src/presentation/home/provider/home_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomeViewMobile extends StatelessWidget {
   const HomeViewMobile({Key? key}) : super(key: key);
@@ -30,9 +33,19 @@ class _ListItemWidget extends StatelessWidget {
     return ListTile(
       title: Text('List Item $index'),
       trailing: const Icon(Icons.arrow_forward_ios_outlined),
-      onTap: _onTapListItem,
+      selected: context.watch<HomeProvider>().selectedItemIndex == index,
+      selectedColor: Colors.pink,
+      selectedTileColor: Colors.pink.shade200,
+      onTap: () => _onTapListItem(context),
     );
   }
 
-  void _onTapListItem() {}
+  void _onTapListItem(BuildContext context) {
+    /// Change selected item index in home provider
+    context.read<HomeProvider>().selectedItemIndex = index;
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => const DetailPage()),
+    );
+  }
 }

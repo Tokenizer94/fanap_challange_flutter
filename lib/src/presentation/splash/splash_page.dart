@@ -1,6 +1,6 @@
-import 'package:fanap_challange_flutter/src/components/responsive_decorator_widget.dart';
-import 'package:fanap_challange_flutter/src/screens/home/home_page.dart';
-import 'package:fanap_challange_flutter/src/screens/splash/splash_view_mobile.dart';
+import 'package:fanap_challange_flutter/src/presentation/components/responsive_decorator_widget.dart';
+import 'package:fanap_challange_flutter/src/presentation/home/home_page.dart';
+import 'package:fanap_challange_flutter/src/presentation/splash/splash_view_mobile.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {

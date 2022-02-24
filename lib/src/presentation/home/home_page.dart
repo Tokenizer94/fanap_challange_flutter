@@ -1,6 +1,6 @@
-import 'package:fanap_challange_flutter/src/components/responsive_decorator_widget.dart';
-import 'package:fanap_challange_flutter/src/screens/home/home_view_mobile.dart';
-import 'package:fanap_challange_flutter/src/screens/home/home_view_tablet.dart';
+import 'package:fanap_challange_flutter/src/presentation/components/responsive_decorator_widget.dart';
+import 'package:fanap_challange_flutter/src/presentation/home/home_view_mobile.dart';
+import 'package:fanap_challange_flutter/src/presentation/home/home_view_tablet.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
