@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
       body: const ResponsiveDecoratorWidget(
         mobile: HomeViewMobile(),
         tablet: HomeViewTablet(),
-        desktop: HomeViewMobile(),
+        desktop: HomeViewTablet(),
       ),
     );
   }
