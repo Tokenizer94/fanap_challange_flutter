@@ -1,3 +1,6 @@
+import 'package:fanap_challange_flutter/src/components/responsive_decorator_widget.dart';
+import 'package:fanap_challange_flutter/src/screens/home/home_view_mobile.dart';
+import 'package:fanap_challange_flutter/src/screens/home/home_view_tablet.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -5,6 +8,18 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    //TODO: Remove hardcoded text
+    const String _appbarTitle = 'Home';
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(_appbarTitle),
+      ),
+      body: const ResponsiveDecoratorWidget(
+        mobile: HomeViewMobile(),
+        tablet: HomeViewTablet(),
+        desktop: HomeViewMobile(),
+      ),
+    );
   }
 }
